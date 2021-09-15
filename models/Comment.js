@@ -7,6 +7,7 @@ Comment.init(
   {
     id: {
         type: DataTypes.INTEGER,
+        allowNull: false,
         primaryKey: true,
         autoIncrement: true
     },
@@ -15,7 +16,7 @@ Comment.init(
         allowNull: false,
         validate: {
             // this means the password must be at least four characters long
-            len: [1, 3000]
+            len: [1]
         }
     },
     user_id: {
